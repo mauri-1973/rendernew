@@ -1,0 +1,31 @@
+<div class="text-center text-bg-dark p-3">
+    <br>
+    <h1>Personajes de Harry Potter</h1>
+    <brS>
+    <% if @character.any? %>
+    <div class="container text-center px-5">
+        <table class="table table-striped">
+            <thead>
+                <tr class="table-success">
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Director</th>
+                    <th scope="col">Sinopsis</th>
+                </tr>
+            </thead>
+            <br>
+            <tbody >
+                <% @character.each do |hp| %>
+                    <tr class="table-light">
+                        <td> <%= hp.name %> </td>
+                        <td> <%= hp.location %> </td>
+                        <td> <%= hp.house %> </td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+    <div>
+    <br>
+    <% else %>
+        <h3>No hay personales para mostrar</h3>
+    <% end %>
+</div>
