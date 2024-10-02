@@ -1,8 +1,16 @@
+# Exported from Render on 2024-10-02T02:36:43Z
 databases:
-  - name: mysite
-    databaseName: mysite
-    user: mysite
-    plan: free
+- name: mysite
+  databaseName: mysite_m2aw
+  user: mysite_m2aw_user
+  plan: free
+  region: oregon
+  ipAllowList:
+  - source: 0.0.0.0/0
+    description: everywhere
+  postgresMajorVersion: "16"
+version: "1"
+
 
 services:
   - type: web
